@@ -17,7 +17,8 @@ module.exports = React.createClass({displayName: "exports",
         format: React.PropTypes.string,
         minView: React.PropTypes.number,
         onChange: React.PropTypes.func,
-        placeholder: React.PropTypes.string
+        placeholder: React.PropTypes.string,
+        name: React.PropTypes.string
     },
 
     getInitialState: function() {
@@ -34,7 +35,8 @@ module.exports = React.createClass({displayName: "exports",
             views: ['days', 'months', 'years'],
             minView: minView,
             currentView: minView || 0,
-            isVisible: false
+            isVisible: false,
+            name: this.props.date
         };
     },
 
@@ -218,6 +220,7 @@ module.exports = React.createClass({displayName: "exports",
         return (
             React.createElement("div", {className: "input-calendar"}, 
                 React.createElement("input", {type: "text", 
+                    name: this.props.name, 
                     className: "input-calendar-value", 
                     value: this.state.inputValue, 
                     onBlur: this.inputBlur, 
