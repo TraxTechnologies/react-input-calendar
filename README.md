@@ -25,6 +25,7 @@ React.render(
   <Calendar
     format="DD/MM/YYYY"
     date="4-12-2014"
+    name="inputName"
   />,
   document.body
 );
@@ -58,6 +59,13 @@ Type: `String` or `Date`
 Default: Current date
 
 Set initial date value.
+
+#### props.name
+Type: `String`
+
+Default: null
+
+Passes down the name for the input element
 
 #### props.minView
 
