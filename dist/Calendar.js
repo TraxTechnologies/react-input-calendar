@@ -36,7 +36,7 @@ module.exports = React.createClass({displayName: "exports",
             minView: minView,
             currentView: minView || 0,
             isVisible: false,
-            name: this.props.date
+            name: this.props.name
         };
     },
 
